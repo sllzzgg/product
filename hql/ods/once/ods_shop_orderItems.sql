@@ -1,0 +1,31 @@
+CREATE EXTERNAL TABLE IF NOT EXISTS ODS_shop.ODS_Shop_OrderItems(
+itemid                  bigint,
+orderid                 bigint,
+ordercode               string,
+productid               bigint,
+productcode             string,
+sku                     string,
+name                    string,
+thumbnailsurl           string,
+description             string,
+quantity                int   ,
+shipmentquantity        int   ,
+costprice               decimal(15,4),
+sellprice               decimal(15,4),
+adjustedprice           decimal(15,4),
+attribute               string,
+remark                  string,
+weight                  int   ,
+deduct                  double,
+points                  int   ,
+productlineid           int   ,
+supplierid              int   ,
+suppliername            string,
+brandid                 int   ,
+brandname               string,
+producttype             int   ,
+discountprice           decimal(15,4),
+buysku                  string
+)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t'
+LOCATION '/opt/data/hive/ods_shop/ODS_Shop_OrderItems';      
